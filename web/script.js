@@ -1,7 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const urlButton = document.getElementById("urlButton");
     const changeButton = document.getElementById('changeButton');
     const colorButton = document.getElementById('colorButton');
     const changeText = document.getElementById('changeText');
+
+    urlButton.addEventListener("click",function() {
+        window.location.href = 'https://github.com/waiorecchi/MACRO-krunker';
+    })
     
     // テキスト変更ボタンの処理
     changeButton.addEventListener('click', function() {
