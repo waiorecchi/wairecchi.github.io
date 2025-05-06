@@ -32,3 +32,30 @@ function myFunction(){
         x.className ="topnav";
     }
 }
+
+/*form制御できればphp管理させたい*/ 
+
+document.querySelector("form").addEventListener("submit",function(event) {
+    const email =document.getElementById("email").Value;
+    if(!email.includes("@")) {
+        alert("メールアドレスが不正です");
+        event.preventDefault();
+    }
+});
+
+document.querySelector("form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    
+    const formData = new FormData(e.target);
+    
+    try {
+      const response = await fetch("/submit", {
+        method: "POST",
+        body: formData,
+      });
+      const result = await response.json();
+      alert("送信成功！");
+    } catch (error) {
+      alert("エラーが発生しました");
+    }
+  });

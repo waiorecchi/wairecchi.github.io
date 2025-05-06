@@ -3,30 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>簡単なウェブページ</title>
+    <title>難解なウェブページ</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>ようこそ!made by tatsuki kitamura</h1>
+        <h1>ポートフォリオ用兼記録用WEBサイト</h1>
         <div class="topnav" id="myTopnav">
-        
+        <div class="center">
             <a href="index.html">ホーム</a>
             <a href="news.html">成果一覧</a>
             <a href="contact.html" class="active">お問い合わせ</a>
             <a href="https://github.com/waiorecchi">github</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             </a>
-          </div>
-        <p>これはHTML、CSS、JavaScriptで作られた簡単なウェブページです。</p>
-        
-        <div class="content">
-            <p id="changeText">ボタンをクリックしてこのテキストを変更しましょう。</p>
-            <button id="changeButton">テキスト変更</button>
-            <button id="colorButton">色変更</button>
         </div>
-    </div>
+          </div>
+        <element class="normal">2025/05</element> 
+    <form action="/submit" method="POST">
+        <label for="name">名前</label>
+        <input type="text" id="name" name="name" required>
+        <label for="Email">Email</label>
+        <input type="text" id="Email" name="Email" required>
+        <label for="Age">年齢</label>
+        <input type="text" id="Age" name="Age" required>
+        
+        <button type="submit">送信</button>
+    </form>
 
+
+
+    </div>
+    <div class="container">
+    <div class="center">
+        @2025 tatsuki kitamura all rights reserved
+    </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
