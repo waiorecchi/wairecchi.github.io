@@ -1,0 +1,18 @@
+{
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "editor.fontSize": 20,
+  "security.workspace.trust.untrustedFiles": "open",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "window.zoomLevel": -1,
+  "security.allowedUNCHosts": ["wsl.localhost"],
+  "files.autoSave": "afterDelay",
+  "workbench.startupEditor": "none",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "explorer.confirmDragAndDrop": false,
+  "git.enableSmartCommit": true,
+  "php.validate.executablePath": ""
+}
