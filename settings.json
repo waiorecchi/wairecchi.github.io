@@ -1,18 +1,18 @@
 {
-  "[python]": {
-    "editor.formatOnType": true
+  "name": "my-website",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite dev",          // 開発サーバー起動
+    "build": "vite build",      // 静的ファイルビルド
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
-  "editor.fontSize": 20,
-  "security.workspace.trust.untrustedFiles": "open",
-  "terminal.integrated.enableMultiLinePasteWarning": false,
-  "window.zoomLevel": -1,
-  "security.allowedUNCHosts": ["wsl.localhost"],
-  "files.autoSave": "afterDelay",
-  "workbench.startupEditor": "none",
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
-  "liveServer.settings.donotShowInfoMsg": true,
-  "explorer.confirmDragAndDrop": false,
-  "git.enableSmartCommit": true,
-  "php.validate.executablePath": ""
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "vite": "^4.0.0",
+    "gh-pages": "^5.0.0"
+  }
 }
