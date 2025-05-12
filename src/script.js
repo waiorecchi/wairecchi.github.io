@@ -27,6 +27,27 @@ document.addEventListener("DOMContentLoaded", function () {
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
     changeText.style.backgroundColor = randomColor;
   });
+
+  // ハンバーガーメニューの機能
+  const hamburger = document.querySelector(".icon");
+  const topnav = document.getElementById("myTopnav");
+
+  if (hamburger) {
+    hamburger.addEventListener("click", function () {
+      if (topnav.className === "topnav") {
+        topnav.className += " responsive";
+      } else {
+        topnav.className = "topnav";
+      }
+    });
+  }
+
+  // ウィンドウリサイズ時の処理
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 600) {
+      topnav.className = "topnav";
+    }
+  });
 });
 
 function myFunction() {

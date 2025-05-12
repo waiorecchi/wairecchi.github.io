@@ -137,19 +137,21 @@ button:hover {
   color: rgb(0, 0, 0);
 }
 
+/* ハンバーガーメニューのスタイル */
 .topnav .icon {
   display: none;
 }
-/*この先mobile用ソース*/
+
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {
-    display: none;
+    display : none;
   }
+}
+
   .topnav a.icon {
     float: right;
     display: block;
   }
-}
 
 @media screen and (max-width: 600px) {
   .topnav.responsive {
