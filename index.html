@@ -3,8 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>難解なウェブページ</title>
+    <title>北村健紀のプロフィール</title>
     <link rel="stylesheet" href="src/styles/styles.css">
+    <style>
+      .profile-container {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin: 20px auto;
+        max-width: 800px;
+      }
+      .profile-section {
+        margin: 20px 0;
+      }
+      .profile-section h2 {
+        color: #444;
+        font-size: 1.2em;
+        margin-bottom: 10px;
+      }
+      .profile-section p {
+        margin: 5px 0;
+        color: #666;
+      }
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .skill-tag {
+        background-color: #e1f5fe;
+        padding: 5px 10px;
+        border-radius: 15px;
+        font-size: 0.9em;
+      }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -18,14 +51,56 @@
             <a href="public/projects.html">Projects</a>
             <a href="public/news.html">成果一覧</a>
             <a href="public/contact.html">お問い合わせ</a>
-            <a href="https://github.com/waiorecchi">github</a>
+            <a href="https://github.com/waiorecchi">GitHub</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             </a>
         </div>
           </div>
-        <div class="normal">WELCOME TO MY PERSONAL PAGES</div> 
+        
+        
+    
+    <div class="container">
+    
+      <h1>自己紹介</h1>
+
+      <div class="profile-section">
+        <h2>基本情報</h2>
+        <p>名前：北村健紀</p>
+        <p>年齢：21歳</p>
+        <p>所在地：千葉県</p>
+        <p>所属：早稲田大学教育学部数学科三年生</p>
+      </div>
+
+      <div class="profile-section">
+        <h2>経験・スキル</h2>
+        <p>プログラミング経験：1～2年</p>
+        <p>デバッグ経験：2年</p>
+        <div class="skills">
+          <span class="skill-tag">HTML</span>
+          <span class="skill-tag">CSS</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">TypeScript</span>
         </div>
-    </div>
+      </div>
+
+      <div class="profile-section">
+        <h2>活動</h2>
+        <p>早稲田大学公認サークル岳文会（山登りサークル）の書記を務めています</p>
+      </div>
+
+      <div class="profile-section">
+        <h2>趣味</h2>
+        <p>ゲーム（Valorant、龍が如くなど）、プログラミング、山登り</p>
+      </div>
+
+      <div class="profile-section">
+        <h2>開発環境</h2>
+        <p>好きなIDE：VSCode、Cursor</p>
+      </div>
+    
+  </div>
+
     <div class="container">
     <div class="center">
         all rights reserved
