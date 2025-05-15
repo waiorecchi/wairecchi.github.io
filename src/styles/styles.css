@@ -139,33 +139,109 @@ button:hover {
 
 /* ハンバーガーメニューのスタイル */
 .topnav .icon {
-  display: none;
+  display: none; /* Hide by default */
+  float: right; /* Keep it floated right for when it's displayed */
 }
 
 @media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {
-    display : none;
+  /* Initially hide all nav links in .center, only icon should be visible via later .icon rule */
+  .topnav .center a:not(.icon) {
+    display: none;
   }
-}
 
   .topnav a.icon {
-    float: right;
+    /* This rule was already present and correct for showing the icon */
     display: block;
+    /* float: right; is part of the default .topnav .icon style if defined outside media query, or can be added here */
   }
 
-@media screen and (max-width: 600px) {
   .topnav.responsive {
-    position: relative;
-  }
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #3a3a3a;
+    z-index: 1000;
+    overflow-y: auto;
   }
-  .topnav.responsive a {
-    float: none;
+
+  .topnav.responsive .center {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    height: 100%;
+    /* padding-top: 70px; Adjusted - icon is part of flex flow now if not absolutely positioned */
+    box-sizing: border-box;
+    overflow-y: auto;
+    padding-top: 20px; /* General padding at the top of the menu */
+  }
+
+  .topnav.responsive .icon {
+    /* This is the close icon */
+    order: -2; /* Ensure it's visually at the very top OR handle with absolute positioning */
+    /* Using absolute positioning as before is likely better for a dedicated close button */
+    position: absolute; /* Keep it absolute for precise placement */
+    right: 15px;
+    top: 15px;
+    font-size: 28px;
+    padding: 10px;
+    border-bottom: none;
+    width: auto;
+    color: #ffffff;
+    text-decoration: none;
+    z-index: 1001; /* Above other content in the overlay */
+  }
+
+  .topnav.responsive .center a {
     display: block;
-    text-align: left;
+    text-align: center;
+    padding: 15px 16px;
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 1px solid #555555;
+    box-sizing: border-box;
+  }
+
+  .topnav.responsive .center a.icon {
+    /* Reset specific styles for the icon if it's part of .center a general styling */
+    border-bottom: none; /* Handled by .topnav.responsive .icon specific rule */
+    /* Icon specific positioning and look is handled by .topnav.responsive .icon */
+    /* If icon is truly part of .center a flow and not absolute, it needs different handling */
+    /* Given previous structure, icon is an 'a' tag within .center. */
+    /* If it's to be treated as a close button separate from link list, it needs distinct styling like position:absolute */
+    /* The .topnav.responsive .icon rule above should handle this if the icon is class="icon" */
+    /* Let's ensure the generic '.topnav.responsive .center a' doesn't override the icon too much */
+    /* The more specific '.topnav.responsive .icon' will win for most properties */
+    display: none; /* Hide the original icon link if we are using the absolutely positioned one as the close button */
+  }
+
+  .topnav.responsive .center a.active {
+    /* Active link as header */
+    order: -1; /* Place it before other non-icon links */
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #ffffff; /* Highlight active link color */
+    padding-top: 30px; /* More space above active link */
+    padding-bottom: 20px;
+    margin-bottom: 15px; /* Space below active link header */
+    border-bottom: none; /* No border for the header-like active link */
+  }
+
+  .topnav.responsive .center a:not(.active):not(.icon) {
+    /* Regular links */
+    /* padding, color, text-decoration, border-bottom are set by .topnav.responsive .center a */
+    /* No specific overrides needed here unless to change something from the general .center a style */
+  }
+
+  .topnav.responsive .center a:not(.icon):hover {
+    background-color: #555555;
+  }
+
+  .topnav.responsive .center a.active:hover {
+    /* Prevent hover on active if it's a header */
+    background-color: transparent; /* Or same as its background */
   }
 }
 /*ここまで*/
