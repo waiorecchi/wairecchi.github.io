@@ -1,55 +1,72 @@
-# wairecchi's Portfolio
+# wairecchi\'s Personal Portfolio Website
 
 ## 概要
 
-このリポジトリは、私のポートフォリオサイトのソースコードです。モダンなデザインとインタラクティブな要素を備えたパーソナルウェブサイトです。
+これは、北村健紀 (waiorecchi) の技術的なスキル、手がけたプロジェクト、そしてこれまでの成果を紹介するために作成された個人のポートフォリオサイトです。モダンなデザインと直感的なユーザーインターフェースを備え、訪問者が快適に情報を閲覧できるよう工夫しています。
 
-## 機能
+このサイトは GitHub Pages を利用して公開されています。
 
-- レスポンシブデザイン
-- プロジェクト紹介
-- 成果一覧
-- お問い合わせフォーム
-- アニメーション効果
+## 主な機能
 
-## プロジェクト一覧
+- **レスポンシブデザイン**: PC、タブレット、スマートフォンなど、あらゆるデバイスの画面サイズに最適化された表示を実現。モバイルデバイスではハンバーガーメニューによるナビゲーションを提供します。
+- **プロジェクト紹介**: これまでに取り組んだ主要なプロジェクトを、使用技術や GitHub リポジトリへのリンクと共に掲載しています。
+- **成果一覧**: 学業や課外活動、個人的な学習の成果などを時系列で記録しています。
+- **お問い合わせフォーム**: サイト訪問者が気軽に連絡を取れるよう、シンプルなコンタクトフォームを設置しています。
+- **インタラクティブな要素**: CSS アニメーション（フェードイン、ホバーエフェクト等）や JavaScript による動的なコンテンツ変更など、ユーザー体験を高めるための細やかな演出を加えています。
 
-### 1. MACRO-krunker
+## 使用技術
 
-- **説明**: Krunker.io ゲームの自動化と最適化のためのマクロツール
-- **使用技術**: Python
-- **GitHub**: [MACRO-krunker](https://github.com/waiorecchi/MACRO-krunker)
-
-### 2. STUDY-ENGLISH-ON-WALLPAPER
-
-- **説明**: デスクトップの壁紙に英語の名言やフレーズを表示し、日常的に英語に触れる機会を作るツール
-- **使用技術**: Python, Batchfile, VBScript
-- **GitHub**: [STUDY-ENGLISH-ON-WALLPAPER](https://github.com/waiorecchi/STUDY-ENGLISH-ON-WALLPAPER)
-
-### 3. Personal Website (このリポジトリ)
-
-- **説明**: モダンなデザインとインタラクティブな要素を備えたパーソナルウェブサイト
-- **使用技術**: HTML, CSS, JavaScript
+- **フロントエンド**: HTML5, CSS3, JavaScript (ES6+)
+- **ホスティング**: GitHub Pages
+- **開発ツール**: Visual Studio Code, Cursor, Git
 
 ## サイト構成
 
-- `index.html` - ホームページ
-- `projects.html` - プロジェクト一覧
-- `news.html` - 成果一覧
-- `contact.html` - お問い合わせフォーム
+```
+.
+├── README.md                 <- このファイル
+├── index.html                <- ホームページ（自己紹介など）
+├── projects.html             <- 制作プロジェクト一覧ページ
+├── news.html                 <- 活動成果やお知らせページ
+├── contact.html              <- お問い合わせフォームページ
+└── src/
+    ├── styles/
+    │   └── styles.css        <- サイト全体のスタイルシート
+    ├── script.js             <- サイト全体のJavaScriptファイル
+    └── img/
+        └── test.jpg          <- ヘッダー等で使用する画像
+```
 
-## 開発環境
+- **ルートディレクトリ**: 各 HTML ページ（`index.html`, `projects.html`, `news.html`, `contact.html`）が配置されています。
+- **`src` ディレクトリ**: スタイルシート (`styles.css`)、JavaScript (`script.js`)、画像ファイル (`img/`) など、ウェブサイトのアセット関連ファイルが格納されています。
 
-- HTML5
-- CSS3
-- JavaScript
-- GitHub Pages
+## ローカルでの表示方法
+
+1. このリポジトリをクローンします。
+   ```bash
+   git clone https://github.com/waiorecchi/wairecchi.github.io.git
+   ```
+2. クローンしたディレクトリに移動します。
+   ```bash
+   cd wairecchi.github.io
+   ```
+3. いずれかの HTML ファイル（例: `index.html`）をウェブブラウザで開きます。
+
+特別なビルドプロセスは不要です。
+
+## 今後の展望 (任意)
+
+- ブログ機能の追加
+- より高度なアニメーションや UI/UX の改善
+- WebAssembly (WASM) を用いた小規模なデモの実装検討
 
 ## ライセンス
 
-MIT License
+このプロジェクトは [MIT License](./LICENSE) のもとで公開されています。 (LICENSE ファイルがない場合はこの記述を調整してください)
 
 ## 作者
 
-- wairecchi
-- GitHub: [@waiorecchi](https://github.com/waiorecchi)
+- **名前**: 北村健紀 (waiorecchi)
+- **GitHub**: [@waiorecchi](https://github.com/waiorecchi)
+
+ご意見、ご感想、バグ報告などございましたら、お気軽に GitHub の Issue またはお問い合わせフォームからご連絡ください。
