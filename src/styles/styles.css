@@ -380,3 +380,36 @@ select:focus {
     right: 0;
   }
 }
+
+/* Added from index.html */
+.profile-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 800px;
+}
+.profile-section {
+  margin: 20px 0;
+}
+.profile-section h2 {
+  color: #444;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+.profile-section p {
+  margin: 5px 0;
+  color: #666;
+}
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.skill-tag {
+  background-color: #e1f5fe;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.9em;
+}
