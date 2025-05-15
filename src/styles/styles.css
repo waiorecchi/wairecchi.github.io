@@ -365,19 +365,13 @@ select:focus {
 
 @media screen and (max-width: 600px) {
   .top-right-image {
-    width: 60px;
-    height: 60px;
+    display: none; /* スマホ版では非表示にする */
+    /* 元の position, top, right は display:none により不要になる */
   }
 
   .header-container {
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  .top-right-image {
-    position: absolute;
-    top: 0;
-    right: 0;
   }
 }
 

@@ -1,55 +1,60 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PERSONAL PAGE</title>
-    <link rel="stylesheet" href="src/styles/styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>成果一覧 - Coming Soon</title>
+    <link rel="stylesheet" href="src/styles/styles.css" />
+    <style>
+      .coming-soon-container {
+        text-align: center;
+        padding: 50px 20px;
+        min-height: 300px; /* コンテンツが少なくてもフッターが上がってこないように */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .coming-soon-container h1 {
+        font-size: 2.5em;
+        color: #333;
+        margin-bottom: 20px;
+      }
+      .coming-soon-container p {
+        font-size: 1.2em;
+        color: #666;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
     <div class="container">
       <div class="header-container">
-            <h1>My Personal Page</h1>
-            <img src="src/img/test.jpg" alt="Test Image" class="top-right-image">
+        <h1>My Personal Page</h1>
+        <img src="src/img/test.jpg" alt="Test Image" class="top-right-image" />
+      </div>
+      <div class="topnav" id="myTopnav">
+        <div class="center">
+          <a href="index.html">ホーム</a>
+          <a href="projects.html">Projects</a>
+          <a href="news.html" class="active">Coming Soon</a>
+          <a href="contact.html">お問い合わせ</a>
+          <a href="https://github.com/waiorecchi">GitHub</a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()"
+            >&#9776;</a
+          >
         </div>
-        <div class="topnav" id="myTopnav">
-            <div class="center">
-                <a href="index.html">ホーム</a>
-                <a href="projects.html">Projects</a>
-                <a href="news.html" class="active">成果一覧</a>
-                <a href="contact.html">お問い合わせ</a>
-                <a href="https://github.com/waiorecchi">GitHub</a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-            </div>
-        </div>
-        <div class="content">
-            <div class="large">2025/05/06 記入</div>
-            <div class="large">tohjiってっこいいよね
-            </div>     
-            <div class="large">2025/05/05 記入</div>
-            <div class="large">
-               場所:ドトール早稲田駅前店
-            <p>作業:このwebサイトの作成、progatepathの進行</p>
-                今日から日記として書いていこう
-              </div>
-        <div class="large">
-        2025/05</div>
-            <p></p>krunkerMACRO作成 <button id="urlButton">詳細</a></button>
-        <p>↓これはdeepseekに書かせたやつ</p>
-        <div class="container">
-                <p id="changeText">ボタンをクリックしてこのテキストを変更しましょう。</p>
-                <button id="changeButton">テキスト変更</button>
-                <button id="colorButton">色変更</button>
-            </div>
-        
-        </div>  
-        </div>
+      </div>
+      <div class="content coming-soon-container">
+        <h1>近日公開！</h1>
+        <p>
+          現在、成果一覧ページは準備中です。<br />素晴らしいコンテンツをお届けできるよう鋭意製作中ですので、<br />もうしばらくお待ちください。お楽しみに！
+        </p>
+      </div>
     </div>
     <div class="container">
-        <div class="center">
-            all rights reserved
-        </div>
+      <div class="center">all rights reserved</div>
     </div>
     <script src="src/script.js"></script>
-</body>
+  </body>
 </html>
