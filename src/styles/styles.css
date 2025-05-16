@@ -139,8 +139,24 @@ button:hover {
 
 /* ハンバーガーメニューのスタイル */
 .topnav .icon {
-  display: none; /* Hide by default */
-  float: right; /* Keep it floated right for when it's displayed */
+  display: none;
+  float: right;
+  cursor: pointer;
+  padding: 14px 16px;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.topnav .close-icon {
+  display: none;
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 15px 16px;
+  border-top: 1px solid #555555;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 @media screen and (max-width: 600px) {
@@ -242,6 +258,19 @@ button:hover {
   .topnav.responsive .center a.active:hover {
     /* Prevent hover on active if it's a header */
     background-color: transparent; /* Or same as its background */
+  }
+
+  .topnav .icon {
+    display: block;
+  }
+
+  .topnav.responsive .close-icon {
+    display: block;
+    order: 999; /* メニューの最後に配置 */
+  }
+
+  .topnav.responsive .icon {
+    display: none;
   }
 }
 /*ここまで*/
